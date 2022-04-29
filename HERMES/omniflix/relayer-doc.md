@@ -253,7 +253,7 @@ list = [
   ['transfer', 'channel-1'],  #osmosis
 #  ['transfer', 'channel-2'],  #juno
 #  ['transfer', 'channel-3'],  #gravity
-  ['transfer', 'channel-4'],  #terra
+#  ['transfer', 'channel-4'],  #terra
 #  ['transfer', 'channel-5'],  #chihuahua
 #  ['transfer', 'channel-6'],  #sifchain
 #  ['transfer', 'channel-7'],  #akash
@@ -264,9 +264,9 @@ list = [
 
 [[chains]]
 id = 'cosmoshub-4'
-rpc_addr = 'http://127.0.0.1:7011'
-grpc_addr = 'http://127.0.0.1:7012'
-websocket_addr = 'ws://127.0.0.1:7011/websocket'
+rpc_addr = 'http://127.0.0.1:16657'
+grpc_addr = 'http://127.0.0.1:1090'
+websocket_addr = 'ws://127.0.0.1:16657/websocket'
 rpc_timeout = '10s'
 account_prefix = 'cosmos'
 key_name = 'cosmos'
@@ -291,9 +291,9 @@ list = [
 
 [[chains]]
 id = 'osmosis-1'
-rpc_addr = 'http://127.0.0.1:7021'
-grpc_addr = 'http://127.0.0.1:7022'
-websocket_addr = 'ws://127.0.0.1:7021/websocket'
+rpc_addr = 'http://127.0.0.1:26657'
+grpc_addr = 'http://127.0.0.1:9090'
+websocket_addr = 'ws://127.0.0.1:26657/websocket'
 rpc_timeout = '10s'
 account_prefix = 'osmo'
 key_name = 'osmosis'
@@ -316,32 +316,6 @@ list = [
   ['transfer', 'channel-199'], # omniflixhub-1
 ]
 
-[[chains]]
-id = 'columbus-5'
-rpc_addr = 'http://127.0.0.1:7031'
-grpc_addr = 'http://127.0.0.1:7032'
-websocket_addr = 'ws://127.0.0.1:7031/websocket'
-rpc_timeout = '10s'
-account_prefix = 'terra'
-key_name = 'terra'
-address_type = { derivation = 'cosmos' }
-store_prefix = 'ibc'
-default_gas = 3000000
-max_gas = 10000000
-gas_price = { price = 170, denom = 'ukrw' } #0.0147 uluna
-gas_adjustment = 0.2
-max_msg_num = 30
-max_tx_size = 180000
-clock_drift = '15s'
-max_block_time = '10s'
-trusting_period = '14days'
-memo_prefix = ''
-trust_threshold = { numerator = '1', denominator = '3' }
-[chains.packet_filter]
-policy = 'allow'
-list = [
- ['transfer', 'channel-27'], # omniflixhub-1
-]
 
 ```
 
